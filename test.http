@@ -1,0 +1,78 @@
+### Create Employee
+
+POST http://localhost:9000/api/employees
+X-Api-Key: SECRET
+Content-Type: application/json
+Accept: application/json
+
+{
+  "employeeId" : "A0010",
+  "employeeNumber" : "11111",
+  "employeeSocialSecurityNumber" : "12431",
+  "employeeFirstName" : "Sammi",
+  "employeeLastname" : "Dev",
+  "employeeCity" : "padang",
+  "employeeAddress" : "sumbar",
+  "employeZipCode" : 26361,
+  "employeeDepartment" : "gopay",
+  "employeeBankAccountNumber" : "123132",
+  "employeeSalary" : 12000000,
+  "employeeHourly" : 100,
+  "employeeContractAmt" : 10,
+  "employeeGender" : "male",
+  "employeeStatus" : "actice"
+}
+
+### Get Employee
+
+GET http://localhost:9000/api/employees/A0001
+X-Api-Key: SECRET
+Accept: application/json
+
+### Update Employee
+
+PUT http://localhost:9000/api/employees/A0001
+X-Api-Key: SECRET
+Content-Type: application/json
+Accept: application/json
+
+{
+  "employeeNumber" : "11111",
+  "employeeSocialSecurityNumber" : "12431",
+  "employeeFirstName" : "Sammi",
+  "employeeLastname" : "Dev",
+  "employeeCity" : "padang",
+  "employeeAddress" : "sumbar",
+  "employeZipCode" : 26361,
+  "employeeDepartment" : "gopay",
+  "employeeBankAccountNumber" : "123132",
+  "employeeSalary" : 12000000,
+  "employeeHourly" : 100,
+  "employeeContractAmt" : 10,
+  "employeeGender" : "male",
+  "employeeStatus" : "actice"
+}
+
+### Delete Employee
+
+DELETE http://localhost:9000/api/employees/A0001
+X-Api-Key: SECRET
+Accept: application/json
+
+### List Employee
+
+GET http://localhost:9000/api/employees
+X-Api-Key: SECRET
+Accept: application/json
+
+### List employee with size parameter
+
+GET http://localhost:9000/api/employees?size=5
+X-Api-Key: SECRET
+Accept: application/json
+
+### List employee with size and page parameter
+
+GET http://localhost:9000/api/employees?size=5&page=1
+X-Api-Key: SECRET
+Accept: application/json
